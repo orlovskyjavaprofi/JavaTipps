@@ -1,0 +1,105 @@
+For windows  kill java app
+taskkill /f /im javaw.exe
+taskkill /f /im java.exe
+
+[[ General Information about Collections]]
+Hashset: unordered, unsorted, iterates in random order
+Hashmap: not thread safe, unsorted, unordered
+Hashtable: synchronized, unsorted, unordered	
+Linkedlist: sorted, iteration is slower
+LinkedHashset: ordered, iterates in order of insertion
+LinkedHashmap:  slower insertion and deletion, faster iteration
+ArrayList: Insertion and deletion are slower, not Thread safe, random access
+Vector: Threadsafe
+StringBuffer: Threadsafe, not immutable
+StringBuilder: not synchronized
+Treemap: sorted order
+LinkedList: iteration slower than ArrayList, fast insertion deletion
+Treeset: natural order, slower,sorted
+
+//lookup java compiler options
+java -XX:+PrintCommandLineFlags -version
+java -XshowSettings:properties -version
+
+//look into github config
+git config --system core.longpaths true
+git config core.autocrlf true
+
+List Interface?
+List interface allows operation specifying the position of the element in the Collection. insertion
+order.
+
+Map Interface?
+
+A key-­?value pair is a set of linked data
+items: a key, which is a unique identifier for some item of data, and the value, which is either 
+the data or a pointer to the data. Key-­?value pairs are used in lookup tables, hash tables and 
+configuration files. A key
+value pair in a Map interface is called an Entry.
+
+
+What is the difference between Set and SortedSet?
+SortedSet Interface extends the Set Interface. Both Set and SortedSet do not allow duplicate 
+elements.
+
+
+Main difference between Set and SortedSet is -­?  an implementation of SortedSet interface 
+maintains its
+elements in a sorted order.  Set interface does not guarantee any Order. For example, If elements 
+4,5,3 are inserted into an implementation of Set interface, it might store the elements in any 
+order. However, if    we  use  SortedSet,  the  elements  are  sorted.  The  SortedSet  
+implementation  would  give  an  output
+3,4,5.
+
+
+What is difference between Map and SortedMap?
+SortedMap interface extends the Map interface. In addition, an implementation of SortedMap 
+interface
+maintains keys in a sorted order.
+
+Explain briefly about Queue Interface?
+Queue  Interface  extends  Collection  interface.  Queue  Interface  is  typically  used  for  
+implementation holding elements in order for some processing.
+
+Queue  interface  offers  methods  peek()  and  poll()  which  get  the  element  at  head  of  the 
+ queue.  The difference  is  that  poll()  method  removes  the  head  from  queue  also.  peek()  
+would  keep  head  of  the
+queue  unchanged.
+
+Explain briefly about Iterator?
+Iterator  interface  enables  us  to  iterate  (loop  around)  a  collection.  All  collections  
+define  a  method iterator() that gets an iterator of the collection.
+
+What is a HashMap?
+HashMap implements Map interface – there by supporting key value pairs. Let’s look at an example.
+
+Run Payra as following
+java -jar payara-micro.jar --deploy /home/user/example.war
+
+Maven stuff
+mvn archetype:generate -DgroupId=mainHessian  -DartifactId=HessianExamples -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+clean compile exec:java
+
+/Java EE
+//EJB
+EJB Container: EJBs are software components, which run in an environment called an EJB container. 
+An EJB
+cannot function outside an EJB Container. The EJB container hosts and manages an Enterprise 
+JavaBean in a similar manner that a Web container hosts a servlet or a Web browser hosts a Java 
+Applet. The EJB container manages the following services so that the developer can concentrate on 
+writing the business logic:
+•    Transactions (refer Q71 – Q75 in Enterprise section)
+•    persistence
+•    EJB instance pooling
+•    Security (refer Q81 in Enterprise section)
+•    Concurrent access (or multi-threading)
+•    Remote access
+Design pattern: EJBs use the proxy design pattern to make remote invocation (i.e. remote proxy) and 
+to add
+container managed services like security and transaction demarcation. Refer Q11                     
+         u about…”
+section for a more detailed discussion on proxy design pattern and dynamic proxies.
+
+EJBContext: Every bean obtains an EJBContext object, which is a reference directly to the container. The EJB
+can request information about its environment like the status of a transaction, a remote reference to itself (an EJB
+cannot use ‘this’ to reference itself) etc.
